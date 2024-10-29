@@ -62,6 +62,6 @@ app.post('/process_post', urlencodedParser, async function (req, res) {
     res.render(__dirname+"/public/details.html",{details:haiku});  
  })  
 
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
     console.log(`Example Port is listening: ${port}`);
 });
