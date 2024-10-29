@@ -29,17 +29,7 @@ async function getHaiku(prompt_new,content_text) {
 }
 
 // Express route to fetch the haiku and respond
-app.get('/', async (req, res) => {
-    try {
-        const prompt_new = "You are an helpful assistant/your role is to find the list of all the places to visit in a <city> mentioned.Give output in the list format.";
-        const content_text = "Bilaspur,Chhatishgarh,India";
-        const haiku = await getHaiku(prompt_new,content_text);
-        res.send(`Gpt response: ${haiku}`);
-    } catch (error) {
-        res.status(500).send("Error generating haiku.");
-        console.error(error);
-    }
-});
+
 app.get('/',(req,res)=>{
     res.send("Hello ji this is me.")
 })
