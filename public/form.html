@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Explore Your City</title>
+    <style>
+        /* Base styling */
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #3b82f6, #a855f7);
+            color: #333;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 420px;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .form-header {
+            font-size: 1.5rem;
+            color: #3b82f6;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .form label {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 8px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .form input[type="text"], .form input[type="number"] {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 10px 0;
+            border: 1px solid #d1d5db;
+            border-radius: 30px;
+            font-size: 1rem;
+            color: #333;
+            background-color: #f9fafb;
+            transition: border-color 0.3s ease;
+        }
+
+        .form input[type="text"]:focus, .form input[type="number"]:focus {
+            border-color: #3b82f6;
+            outline: none;
+            box-shadow: 0 0 8px rgba(59, 130, 246, 0.2);
+        }
+
+        .form input[type="submit"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 30px;
+            background-color: #3b82f6;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .form input[type="submit"]:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">Plan Your Day Out</div>
+        <form action="http://127.0.0.1:4000/process_post" method="POST" class="form">
+            <label for="first_name">City Name</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Enter your city name">
+
+            <label for="last_name">State</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Enter your state name">
+            
+            <label for="hours">Hours Available</label>
+            <input type="number" id="hours" name="hours" placeholder="Enter hours you want to spend">
+
+            <input type="submit" value="Find Activities">
+        </form>
+    </div>
+</body>
+</html>
